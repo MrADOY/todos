@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "30914fbb-2c6b-40c3-b4ce-bab23a087b0d",
+		"name": "TODO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4136098"
+	},
+	"item": [
+		{
+			"name": "GET TODOS BY AUTEUR ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/todos?idAuteur=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "idAuteur",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST TODO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idAuteur\": 5,\n    \"prenomAuteur\" : \"Aurelien\",\n    \"libelleTodo\" : \"Todo sur le meme auteur\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
